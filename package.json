@@ -1,0 +1,21 @@
+{
+  "name": "laravel-mix-svelte",
+  "version": "0.1.0",
+  "description": "A Laravel Mix extension for Svelte support.",
+  "keywords": [
+    "laravel mix",
+    "mix",
+    "svelte"
+  ],
+  "main": "src/index.js",
+  "author": {
+    "name": "Gal Jakic",
+    "email": "gal@wewowweb.com",
+    "role": "Author"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/wewowweb/laravel-mix-svelte#readme",
+  "peerDependencies": {
+    "laravel-mix": "^2.1.7"
+  }
+}
