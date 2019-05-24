@@ -8,7 +8,7 @@ Svelte is an interesting new approach in the JavaScript space, created by [@Rich
 
 If you don't know what Svelte is, we highly recommend starting with Rich Harris' talk [Rethinking Reactivity](https://youtu.be/AdNJ3fydeao) from YGLF Code Camp 2019, his [introductory blog post](https://svelte.dev/blog/svelte-3-rethinking-reactivity) or - if you're more of a hands-on type - Svelte's [interactive tutorial](https://svelte.dev/tutorial/).
 
-*This package is still in active development, so you might want to [watch](https://github.com/wewowweb/laravel-mix-svelte/subscription) the repository to be notified of future changes.*
+_This package is still in active development, so you might want to [watch](https://github.com/wewowweb/laravel-mix-svelte/subscription) the repository to be notified of future changes._
 
 ## Installation
 
@@ -22,14 +22,15 @@ npm install wewowweb/laravel-mix-svelte
 
 After installing it, just require it in your `webpack.mix.js` file like so:
 
-``` js
-const mix = require('laravel-mix');
+```js
+const mix = require("laravel-mix");
 
-require('laravel-mix-svelte');
+require("laravel-mix-svelte");
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
-    .svelte();
+mix
+  .js("resources/js/app.js", "public/js")
+  .sass("resources/sass/app.scss", "public/css")
+  .svelte();
 ```
 
 ### Future planned improvements
@@ -41,7 +42,6 @@ mix.js('resources/js/app.js', 'public/js')
 - [ ] Add ExtractCss functionality for LESS
 - [ ] Add ExtractCss functionality for Stylus
 - [ ] Add tests.
-
 
 ### Changelog
 
