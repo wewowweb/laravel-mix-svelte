@@ -2,7 +2,7 @@
 
 All notable changes to `laravel-mix-svelte` will be documented in this file
 
-## v0.1.2 - 2019-05-27
+## v0.1.2 - 2019-07-17
 
 - Remove excluded /node_modules/ folder from webpackRules.
 
