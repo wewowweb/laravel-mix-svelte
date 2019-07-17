@@ -9,7 +9,6 @@ class Svelte {
   webpackRules () {
       return {
           test: /\.(html|svelte)$/,
-          exclude: /node_modules/,
           use: 'svelte-loader',
       }
   }
