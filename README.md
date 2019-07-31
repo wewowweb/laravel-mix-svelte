@@ -32,6 +32,32 @@ mix.js('resources/js/app.js', 'public/js')
     .svelte();
 ```
 
+If you will intend to use sass language into your .svelte components, you must install node-sass package.
+
+``` js
+npm install --save-dev node-sass
+```
+
+Then just add `type="text/scss"` atribbute in the style tag on svelte file:
+
+``` html
+<style type="text/scss">
+    .class {
+        ...
+```
+ 
+And pass the `withSass` option into svelte call:
+
+``` js
+const mix = require('laravel-mix');
+
+require('laravel-mix-svelte');
+
+mix.js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css')
+    .svelte({ withSass: true });
+```
+
 ### Future planned improvements
 
 - [ ] Add hotReload functionality

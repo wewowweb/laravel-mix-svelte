@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-mix-svelte` will be documented in this file
 
+## v0.2.2 - 2019-07-31
+
+- Add support for compile embedded sass/scss into .svelte files.
+
 ## v0.1.2 - 2019-07-17
 
 - Remove excluded /node_modules/ folder from webpackRules.
