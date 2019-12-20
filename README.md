@@ -32,7 +32,7 @@ mix.js('resources/js/app.js', 'public/js')
     .svelte();
 ```
 
-Enable dev mode example:
+Use the options parameter example:
 
 ``` js
 const mix = require('laravel-mix');
@@ -45,6 +45,9 @@ mix.js('resources/js/app.js', 'public/js')
         dev: true
     });
 ```
+
+For more options see the svelte-loader package:
+[Svelte Loader](https://github.com/sveltejs/svelte-loader)
 
 ### Future planned improvements
 
