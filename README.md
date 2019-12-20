@@ -32,6 +32,20 @@ mix.js('resources/js/app.js', 'public/js')
     .svelte();
 ```
 
+Enable dev mode example:
+
+``` js
+const mix = require('laravel-mix');
+
+require('laravel-mix-svelte');
+
+mix.js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css')
+    .svelte({
+        dev: true
+    });
+```
+
 ### Future planned improvements
 
 - [ ] Add hotReload functionality
