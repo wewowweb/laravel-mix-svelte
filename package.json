@@ -1,6 +1,6 @@
 {
   "name": "laravel-mix-svelte",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A Laravel Mix extension for Svelte support.",
   "keywords": [
     "laravel mix",

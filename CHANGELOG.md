@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-mix-svelte` will be documented in this file
 
+## v0.1.3 - 2019-12-23
+
+- Add ability to pass svelte-loader options into mix.svelte().
+
 ## v0.1.2 - 2019-07-17
 
 - Remove excluded /node_modules/ folder from webpackRules.
