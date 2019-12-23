@@ -1,22 +1,33 @@
-let mix = require('laravel-mix');
+let mix = require("laravel-mix");
 
 class Svelte {
-  dependencies() {
-      this.requiresReload = true;
-      return ['svelte', 'svelte-loader'];
-  }
-  
-  webpackRules () {
-      return {
-          test: /\.(html|svelte)$/,
-          use: 'svelte-loader',
-      }
-  }
-  
-  boot() {
-      let svelte = require('svelte');
-      let loader = require('svelte-loader');
-  }
+	constructor() {
+		this.options = {};
+	}
+
+	dependencies() {
+		this.requiresReload = true;
+		return ["svelte", "svelte-loader"];
+	}
+
+	register(options) {
+		this.options = { ...this.options, ...options };
+	}
+
+	webpackRules() {
+		return {
+			test: /\.(html|svelte)$/,
+			use: {
+				loader: "svelte-loader",
+				options: this.options
+			}
+		};
+	}
+
+	boot() {
+		let svelte = require("svelte");
+		let loader = require("svelte-loader");
+	}
 }
 
-mix.extend('svelte', new Svelte());
+mix.extend("svelte", new Svelte());
