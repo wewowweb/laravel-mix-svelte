@@ -24,6 +24,20 @@ class Svelte {
 		};
 	}
 
+    webpackConfig(webpackConfig) {
+        webpackConfig.resolve.mainFields = [
+            'svelte',
+            'browser',
+            'module',
+            'main',
+        ];
+        webpackConfig.resolve.extensions = ['.mjs', '.js', '.svelte'];
+        webpackConfig.resolve.alias.svelte = path.resolve(
+            'node_modules',
+            'svelte'
+        );
+    }
+
 	boot() {
 		let svelte = require("svelte");
 		let loader = require("svelte-loader");
