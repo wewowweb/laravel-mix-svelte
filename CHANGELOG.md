@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-mix-svelte` will be documented in this file
 
+## v0.1.5 - 2020-05-09
+
+- Fix error in versioning inside package.json & package-lock.json.
+
+## v0.1.4 - 2020-04-02
+
+- Update webpack config from Svelte webpack template.
+
 ## v0.1.3 - 2019-12-23
 
 - Add ability to pass svelte-loader options into mix.svelte().
