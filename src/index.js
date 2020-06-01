@@ -14,15 +14,21 @@ class Svelte {
 		this.options = { ...this.options, ...options };
 	}
 
-	webpackRules() {
-		return {
-			test: /\.(html|svelte)$/,
-			use: {
-				loader: "svelte-loader",
-				options: this.options
-			}
-		};
-	}
+    webpackRules() {
+        return [
+            {
+                test: /\.(html|svelte)$/,
+                use: [
+                    { loader: 'babel-loader', options: mix.config.babel() },
+                    { loader: 'svelte-loader', options: this.options }
+                ]
+            },
+            {
+                test: /\.(mjs)$/,
+                use: { loader: 'babel-loader', options: mix.config.babel() }
+            }
+        ];
+    }
 
     webpackConfig(webpackConfig) {
         webpackConfig.resolve.mainFields = [
