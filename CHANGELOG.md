@@ -2,6 +2,9 @@
 
 All notable changes to `laravel-mix-svelte` will be documented in this file
 
+## v0.2.0 - 2021-01-14
+- Add compatibility with Mix v5
+
 ## v0.1.6 - 2020-06-01
 
 - Add ability to use Mix's Babel configuration on Svelte files.
