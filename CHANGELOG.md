@@ -2,6 +2,9 @@
 
 All notable changes to `laravel-mix-svelte` will be documented in this file
 
+## v0.3.0 - 2021-01-14
+- Add compatibility with Mix v6
+
 ## v0.2.0 - 2021-01-14
 - Add compatibility with Mix v5
 
