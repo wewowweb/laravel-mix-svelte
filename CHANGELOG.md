@@ -1,6 +1,8 @@
 # Changelog
 
 All notable changes to `laravel-mix-svelte` will be documented in this file
+## v0.3.1 - 2021-01-17
+- Fix typo in composer.json
 
 ## v0.3.0 - 2021-01-14
 - Add compatibility with Mix v6
