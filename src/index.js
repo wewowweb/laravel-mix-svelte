@@ -19,13 +19,13 @@ class Svelte {
             {
                 test: /\.(html|svelte)$/,
                 use: [
-                    { loader: 'babel-loader', options: mix.config.babel() },
+                    { loader: 'babel-loader', options: Config.babel() },
                     { loader: 'svelte-loader', options: this.options }
                 ]
             },
             {
                 test: /\.(mjs)$/,
-                use: { loader: 'babel-loader', options: mix.config.babel() }
+                use: { loader: 'babel-loader', options: Config.babel() }
             }
         ];
     }
