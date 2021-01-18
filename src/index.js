@@ -1,4 +1,5 @@
 let mix = require("laravel-mix");
+let path = require("path");
 
 class Svelte {
 	constructor() {
@@ -38,6 +39,8 @@ class Svelte {
             'main',
         ];
         webpackConfig.resolve.extensions = ['.mjs', '.js', '.svelte'];
+
+        webpackConfig.resolve.alias = webpackConfig.resolve.alias || {};
         webpackConfig.resolve.alias.svelte = path.resolve(
             'node_modules',
             'svelte'
