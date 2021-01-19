@@ -1,4 +1,5 @@
 let mix = require("laravel-mix");
+let path = require("path");
 
 class Svelte {
 	constructor() {
@@ -19,13 +20,13 @@ class Svelte {
             {
                 test: /\.(html|svelte)$/,
                 use: [
-                    { loader: 'babel-loader', options: mix.config.babel() },
+                    { loader: 'babel-loader', options: Config.babel() },
                     { loader: 'svelte-loader', options: this.options }
                 ]
             },
             {
                 test: /\.(mjs)$/,
-                use: { loader: 'babel-loader', options: mix.config.babel() }
+                use: { loader: 'babel-loader', options: Config.babel() }
             }
         ];
     }
@@ -38,6 +39,8 @@ class Svelte {
             'main',
         ];
         webpackConfig.resolve.extensions = ['.mjs', '.js', '.svelte'];
+
+        webpackConfig.resolve.alias = webpackConfig.resolve.alias || {};
         webpackConfig.resolve.alias.svelte = path.resolve(
             'node_modules',
             'svelte'
