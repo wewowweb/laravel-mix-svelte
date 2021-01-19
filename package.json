@@ -1,6 +1,6 @@
 {
   "name": "laravel-mix-svelte",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "A Laravel Mix extension for Svelte support.",
   "keywords": [
     "laravel mix",
@@ -16,6 +16,6 @@
   "license": "MIT",
   "homepage": "https://github.com/wewowweb/laravel-mix-svelte#readme",
   "peerDependencies": {
-    "laravel-mix": "^4.0 || ^5.0 || ^6.0"
+    "laravel-mix": "^6.0"
   }
 }

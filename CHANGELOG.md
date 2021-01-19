@@ -1,6 +1,11 @@
 # Changelog
 
 All notable changes to `laravel-mix-svelte` will be documented in this file
+
+## v0.4.0 - 2021-01-19
+- Fix babel configuration for Laravel Mix 6
+- Fix issue with path and webpackConfig.resolve.alias
+
 ## v0.3.1 - 2021-01-17
 - Fix typo in composer.json
 
