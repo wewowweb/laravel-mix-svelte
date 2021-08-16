@@ -4,6 +4,8 @@ let path = require("path");
 class Svelte {
 	constructor() {
 		this.options = {};
+		this.extensions = [];
+		this.ruleExtensions = "";
 	}
 
 	dependencies() {
@@ -11,14 +13,19 @@ class Svelte {
 		return ["svelte", "svelte-loader"];
 	}
 
-	register(options) {
+	register(options, extensions = []) {
 		this.options = { ...this.options, ...options };
+		this.extensions = [ '.mjs', '.js', '.svelte', ...extensions];
+		let extensionRules = extensions.map(function(item) {
+			return item.startsWith('.') ? item.substring(1) : item;
+		});
+		this.ruleExtensions = [ "html|svelte", ...extensionRules ].join('|');
 	}
 
     webpackRules() {
         return [
             {
-                test: /\.(html|svelte)$/,
+                test: new RegExp('\.('+ this.ruleExtensions + ')$'),
                 use: [
                     { loader: 'babel-loader', options: Config.babel() },
                     { loader: 'svelte-loader', options: this.options }
@@ -38,7 +45,7 @@ class Svelte {
             'module',
             'main',
         ];
-        webpackConfig.resolve.extensions = ['.mjs', '.js', '.svelte'];
+        webpackConfig.resolve.extensions = this.extensions;
 
         webpackConfig.resolve.alias = webpackConfig.resolve.alias || {};
         webpackConfig.resolve.alias.svelte = path.resolve(
