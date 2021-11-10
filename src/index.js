@@ -34,7 +34,15 @@ class Svelte {
             {
                 test: /\.(mjs)$/,
                 use: { loader: 'babel-loader', options: Config.babel() }
-            }
+            },
+            {
+				// required to prevent errors from Svelte on Webpack 5+
+				test: /node_modules\/svelte\/.*\.mjs$/,
+				resolve: {
+					fullySpecified: false
+				}
+			}
+
         ];
     }
 
