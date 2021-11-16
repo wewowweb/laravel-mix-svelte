@@ -49,17 +49,6 @@ mix.js('resources/js/app.js', 'public/js')
 For more options see the svelte-loader package:
 [Svelte Loader](https://github.com/sveltejs/svelte-loader)
 
-### Future planned improvements
-
-- [ ] Add hotReload functionality
-- [ ] Add noPreserveState functionality
-- [ ] Add ExtractCss functionality for CSS
-- [ ] Add ExtractCss functionality for SASS
-- [ ] Add ExtractCss functionality for LESS
-- [ ] Add ExtractCss functionality for Stylus
-- [ ] Add tests.
-
-
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
