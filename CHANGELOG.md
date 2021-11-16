@@ -2,6 +2,11 @@
 
 All notable changes to `laravel-mix-svelte` will be documented in this file
 
+## v0.5.0 - 2021-11-16
+- Add .gitignore
+- Add Svelte on Webpack 5+ rule
+- Add the ability to extend the rules with svelte-loader plugins
+
 ## v0.4.0 - 2021-01-19
 - Fix babel configuration for Laravel Mix 6
 - Fix issue with path and webpackConfig.resolve.alias
